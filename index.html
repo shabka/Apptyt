@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Apptyt</title>
+    
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="assets/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="assets/lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/lib/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="assets/lib/device-mockups/device-mockups.min.css">
+
+    <!-- Theme CSS -->
+    <link href="assets/css/new-age.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!--<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     <script>
+    $(document).ready(function(){     
+    $("#emailForm").submit(function(e) {
+    var url = "https://apptyt.io/restaurant/sendcontactemail/"; // the script where you handle the form input.
+
+    $.ajax({
+           type: "POST",
+           url: url,
+           data: $("#emailForm").serialize(), // serializes the form's elements.
+           success: function()
+           {
+                    alert("Your contact info has been successfully submitted! We will contact you shortly");
+                    document.getElementById("email").value = "";
+               //alert(data); // show response from the php script.
+           }
+         });
+
+    e.preventDefault(); // avoid to execute the actual submit of the form.
+     });
+    });     
+    </script>
+
+</head>
+
+<body id="page-top">
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Apptyt</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" style="font-size: 12px" href="#download">Download</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" style="font-size: 12px" href="#features">Features</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" style="font-size: 12px" href="#jobs">Careers</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" style="font-size: 12px" href="#newsletter">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <header>
+        <div class="blur"> 
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-7">
+                    <div class="header-content">
+                        <div class="header-content-inner">
+                            <h1 style="font-weight: 370; text-shadow: 2px 2px 4px #000000">Convenient and swift <br> with every meal</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-5">
+          <!--          <div class="device-container">
+                        <div class="device-mockup iphone6_plus portrait white">
+                            <div class="device">
+                                <div class="screen">
+                                    <img src="img/demo-screen-1.jpg" class="img-responsive" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <section id="download" class="download bg-primary text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <h2 class="section-heading">Are you curious yet?</h2>
+                    <p>If you're hungry download the app on any mobile device!</p>
+                    <div class="badges">
+                        <a class="badge-link" href="https://play.google.com/store/apps/details?id=com.apptyt.restaurants"><img src="assets/img/google-play-badge.svg" alt=""></a>
+                        <a class="badge-link" href="https://appsto.re/ca/ki4-kb.i"><img src="assets/img/app-store-badge.svg" alt=""></a>
+                    </div>
+                    <p></br>Or maybe you're a restaurant owner, request a demo!</p>
+                    <a href="#newsletter" class="btn btn-outline btn-xl page-scroll">Request a demo!</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="section-heading">
+                        <h2>For avid Foodies</h2>
+                        <p class="text-muted">Take full control over your dishes from the moment you order until the last piece</p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="device-container">
+                        <div class="device-mockup iphone6 portrait white">
+                            <div class="device">
+                                <div class="screen">
+                                    <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
+                                    <img src="assets/img/restaurants.jpg" class="img-responsive" alt=""> </div>
+                                <div class="button">
+                                    <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="feature-item">
+                                    <i class="icon-screen-smartphone text-primary"></i>
+                                    <h3>Customize your order</h3>
+                                    <p class="text-muted">Choose your order and customize it entirely on your smartphone</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="feature-item">
+                                    <i class="icon-location-pin text-primary"></i>
+                                    <h3>Choose your restaurant</h3>
+                                    <p class="text-muted">Browse multiple restaurants and get information about them such as their menu</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="feature-item">
+                                    <i class="icon-clock text-primary"></i>
+                                    <h3>Never wait in line</h3>
+                                    <p class="text-muted">Place your order directly and pay through the application, without any waiting</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="feature-item">
+                                    <i class="icon-user text-primary"></i>
+                                    <h3>Loyalty program</h3>
+                                    <p class="text-muted">Get coupons and discounts from your favorite spots</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="styler-section" class="styler">
+        <div class="blur">              
+        </div>
+    </section>
+
+    <section id="features-restaurant" class="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="section-heading">
+                        <h2>For passionate restaurant owners</h2>
+                        <p class="text-muted">Get organized to get customers</p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="device-container">
+                        <div class="device-mockup ipad portrait white">
+                            <div class="device">
+                                <div class="screen">
+                                    <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
+                                    <img src="assets/img/menu.jpg" class="img-responsive" alt=""> </div>
+                                <div class="button">
+                                    <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="feature-item">
+                                    <i class="icon-screen-desktop text-primary"></i>
+                                    <h3>Easy staff management</h3>
+                                    <p class="text-muted">Organize your staff and your orders from your tablet or PC</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="feature-item">
+                                    <i class="icon-graph text-primary"></i>
+                                    <h3>Stats and analytics</h3>
+                                    <p class="text-muted">Increase revenue by obtaining valuable data</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="feature-item">
+                                    <i class="icon-book-open text-primary"></i>
+                                    <h3>Dynamic and Customizable menu</h3>
+                                    <p class="text-muted">Change your menu and its info on the fly</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="feature-item">
+                                    <i class="icon-support text-primary"></i>
+                                    <h3>Easy integration</h3>
+                                    <p class="text-muted">No additinal hardware or change in existing system needed to get it started</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="styler-section" class="styler ">
+        <div class="blur">              
+        </div>
+    </section>
+	
+	    <section id="jobs" class="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="section-heading">
+                        <h2>Job opportunities</h2>
+                        <p class="text-muted">Get involved in our dynamic environment!</p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div style="align: center">
+                                <div class="feature-item">
+									<i class="icon-briefcase text-primary"></i>
+                                    <a href="sales.html" style= "color: #000102"><h3>Sales Representative</h3>
+									</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--
+    <section class="cta">
+        <div class="cta-content">
+            <div class="container">
+                <h2>Stop waiting.<br>Start building.</h2>
+                <a href="#contact" class="btn btn-outline btn-xl page-scroll">Let's Get Started!</a>
+            </div>
+        </div>
+        <div class="overlay"></div>
+    </section> -->
+
+
+            <section id="newsletter" class="newsletter">
+            <div class="newsletter-container">
+                <div class="container">
+                    <div class="section-heading">
+                       <h2>Contact us</h2>
+                       <p class="text-muted">Write down your email and we will contact you right away!</p>
+                    </div>
+                    <div class="row newsletter-form">
+                        <form class="form-inline" id="emailForm">
+                            <div class="form-group">
+                               <input type="email" class="form-control" id="email" name="email">
+                               <button type="submit" class="btn btn-default">Get in touch</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section> 
+
+    <section id="contact" class="contact bg-primary">
+        <div class="container">
+            <h2>Don't forget to follow us!</h2>
+            <ul class="list-inline list-social">
+                <li class="social-twitter">
+                    <a href="https://twitter.com/apptyt"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li class="social-facebook">
+                    <a href="https://www.facebook.com/Apptyt/"><i class="fa fa-facebook"></i></a>
+                </li>
+        <!--        <li class="social-google-plus">
+                    <a href="#"><i class="fa fa-google-plus"></i></a>
+                </li> -->
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2017 Apptyt. All Rights Reserved.</p>
+            <ul class="list-inline">
+                <li>
+                    <a href="privacy.html">Privacy</a>
+                </li>
+                <li>
+                    <a href="terms.html">Terms</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="assets/lib/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="assets/lib/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="assets/js/new-age.min.js"></script>
+
+</body>
+
+</html>
